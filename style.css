@@ -50,6 +50,9 @@ header .left {
   height: inherit;
   gap: 5px;
 }
+header .nav-active {
+  color: #30AADC;
+}
 
 h1 {
   color: white;
