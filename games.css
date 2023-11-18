@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100vw;
+  padding: 0 30px;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.wrapper .main-carousel {
+  background-image: url("img/journey.png");
+  background-position: 0;
+  background-size: auto 100%;
+  background-position: center;
+  width: 72.5%;
+  max-width: 1050px;
+  border-radius: 20px;
+  position: relative;
+}
+.wrapper .main-carousel .info-carousel {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 2;
+  bottom: 55px;
+  left: 55px;
+}
+.wrapper .main-carousel .info-carousel img {
+  width: 492px;
+}
+.wrapper .main-carousel .info-carousel p {
+  width: 337px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px; /* 156.25% */
+}
+.wrapper .main-carousel .info-carousel input {
+  width: 164px;
+  height: 54px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  transition: 0.25s;
+  border: none;
+  cursor: pointer;
+}
+.wrapper .column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+.wrapper .column ul li {
+  display: flex;
+  align-items: center;
+  background-color: #121212;
+  width: 260px;
+  height: 115px;
+  border-radius: 10px;
+}
+.wrapper .column ul li p {
+  margin-left: 15px;
+}
+.wrapper .column ul li img {
+  height: 115px;
+  border-radius: 10px 0px 0px 10px;
+}
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: linear-gradient(169deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}/*# sourceMappingURL=games.css.map */
