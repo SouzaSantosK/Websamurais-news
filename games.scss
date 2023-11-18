@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-ul{
-    list-style: none;
-}
-.wrapper{
+.wrapper-mains{
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -15,6 +12,7 @@ ul{
     position: relative;
 
     user-select: none;
+    margin: 160px 0;
 
     .main-carousel{
         background-image: url("img/journey.png");
@@ -52,7 +50,7 @@ ul{
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 25px; /* 156.25% */
+                line-height: 25px;
             }
 
             input{
@@ -82,6 +80,7 @@ ul{
             flex-direction: column;
             gap: 6px;
             position: relative;
+            list-style: none;
 
             li{
                 display: flex;
@@ -113,4 +112,174 @@ ul{
         z-index: 1; 
         background: linear-gradient(169deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
     }
+}
+
+.newsletter{
+    width: 100vw;
+    height: 900px;
+    background: linear-gradient(97deg, #338EEE 0%, #34B8FB 100%);
+
+    .top{
+        display: flex;
+        gap: 156px;
+        margin: 50px;
+
+        .right{
+            display: flex;
+            gap: 20px;
+
+            .one, .two{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 325px;
+                height: 400px;
+                padding: 30px;
+
+                >p{
+                    flex: 2;
+                }
+
+                div{
+                    flex: 10;
+
+                    h4{
+                        font-size: 35px;
+                        font-weight: 200;
+                        letter-spacing: 1.75px;
+                    }
+                    p{
+                        margin-top: 10px;
+                        font-weight: 200;
+                        line-height: 25px;
+                        font-size: 17px;
+                    }
+
+                }
+
+                border: 5px solid #FFF;
+                background: linear-gradient(327deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%);
+            }
+        }
+        .left{
+            width: 550px;
+            height: 330px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h3{
+                font-family: 'Inter';
+                font-size: 40px;
+                font-weight: 200;
+                line-height: 60px;
+            }
+
+            p{
+                font-family: 'Inter';
+                font-weight: 200;
+                line-height: 30px;
+                font-size: 17px;
+            }
+        }
+    }
+    .bottom{
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .title{
+            position: relative;
+
+            h3{
+                font-size: 45px;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+
+            span{
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 6px;
+                background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.25) 100%);
+                bottom: 17px;
+            }
+        }
+
+        .form-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 50px;
+            padding-bottom: 96px;
+            height: 500px;
+            position: relative;
+
+            .thanks{
+                position: absolute;
+                bottom: 40px;
+            }
+
+            p{
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: 0.9px;
+                text-align: center;
+            }
+
+            h4{
+                font-size: 45px;
+                text-align: center;
+                font-weight: 400;
+            }
+
+            >*{
+                width: 834px;
+            }
+
+            background-color: #fff;
+            color: #000;
+            width: 90%;
+
+            .form{
+                position: relative;
+
+                label{
+                    position: absolute;
+                    top: -30px;
+                }
+
+                input[type="text"], input[type="email"]{
+                    border: none;
+                    background: #ECEFF2;
+                    font-size: 17px;
+                    font-family: "Inter";
+                    outline: none;
+                    padding: 25px 15px;
+                    margin-right: 20px;
+                    width: 300px;
+                }
+                input[type="button"]{
+                    background: linear-gradient(99deg, #338EEF 0%, #34B8FB 100%);
+                    width: 183px;
+                    height: 70px;
+                    border: none;
+
+                    color: #FFF;
+                    text-align: center;
+                    font-family: 'Inter';
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 60px;
+                    letter-spacing: 0.9px;
+
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    margin-bottom: 500px;
 }
