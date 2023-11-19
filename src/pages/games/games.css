@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "../../../index.css";
 .wrapper-mains {
   display: flex;
   justify-content: center;
@@ -13,7 +14,7 @@
   margin: 160px 0;
 }
 .wrapper-mains .main-carousel {
-  background-image: url("img/journey.png");
+  background-image: url("../../img/journey.png");
   background-position: 0;
   background-size: auto 100%;
   background-position: center;
@@ -37,7 +38,7 @@
 }
 .wrapper-mains .main-carousel .info-carousel p {
   width: 337px;
-  color: #FFF;
+  color: #fff;
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -95,7 +96,7 @@
 .newsletter {
   width: 100vw;
   height: 900px;
-  background: linear-gradient(97deg, #338EEE 0%, #34B8FB 100%);
+  background: linear-gradient(97deg, #338eee 0%, #34b8fb 100%);
   margin-bottom: 500px;
 }
 .newsletter .top {
@@ -108,28 +109,33 @@
   display: flex;
   gap: 20px;
 }
-.newsletter .top .right .one, .newsletter .top .right .two {
+.newsletter .top .right .one,
+.newsletter .top .right .two {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 325px;
   height: 400px;
   padding: 30px;
-  border: 5px solid #FFF;
+  border: 5px solid #fff;
   background: linear-gradient(327deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
 }
-.newsletter .top .right .one > p, .newsletter .top .right .two > p {
+.newsletter .top .right .one > p,
+.newsletter .top .right .two > p {
   flex: 2;
 }
-.newsletter .top .right .one div, .newsletter .top .right .two div {
+.newsletter .top .right .one div,
+.newsletter .top .right .two div {
   flex: 10;
 }
-.newsletter .top .right .one div h4, .newsletter .top .right .two div h4 {
+.newsletter .top .right .one div h4,
+.newsletter .top .right .two div h4 {
   font-size: 35px;
   font-weight: 200;
   letter-spacing: 1.75px;
 }
-.newsletter .top .right .one div p, .newsletter .top .right .two div p {
+.newsletter .top .right .one div p,
+.newsletter .top .right .two div p {
   margin-top: 10px;
   font-weight: 200;
   line-height: 25px;
@@ -173,7 +179,7 @@
   position: absolute;
   width: 100%;
   height: 6px;
-  background: linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.25) 100%);
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.25) 100%);
   bottom: 17px;
 }
 .newsletter .bottom .form-container {
@@ -215,9 +221,10 @@
   position: absolute;
   top: -30px;
 }
-.newsletter .bottom .form-container .form input[type=text], .newsletter .bottom .form-container .form input[type=email] {
+.newsletter .bottom .form-container .form input[type=text],
+.newsletter .bottom .form-container .form input[type=email] {
   border: none;
-  background: #ECEFF2;
+  background: #eceff2;
   font-size: 17px;
   font-family: "Inter";
   outline: none;
@@ -226,11 +233,11 @@
   width: 300px;
 }
 .newsletter .bottom .form-container .form input[type=button] {
-  background: linear-gradient(99deg, #338EEF 0%, #34B8FB 100%);
+  background: linear-gradient(99deg, #338eef 0%, #34b8fb 100%);
   width: 183px;
   height: 70px;
   border: none;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: "Inter";
   font-size: 18px;

@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-*, *::after, *::before {
+
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -30,37 +33,41 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-header a {
-  width: 180px;
-  font-size: 18px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  height: inherit;
-  align-items: center;
-  transition: 0.2s ease;
-  text-decoration: none;
-  color: white;
-}
-header a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-header .left {
-  display: flex;
-  height: inherit;
-  gap: 5px;
-}
-header .nav-active {
-  color: #30AADC;
+
+  a {
+    width: 180px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: inherit;
+    align-items: center;
+    transition: 0.2s ease;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .left {
+    display: flex;
+    height: inherit;
+    gap: 5px;
+  }
+
+  .nav-active {
+    color: #30aadc;
+  }
 }
 
 h1 {
   color: white;
   font-size: 160px;
   text-transform: uppercase;
-  background: linear-gradient(180deg, #DEEAFF, rgba(224, 236, 255, 0.3));
+  background: linear-gradient(180deg, #deeaff, rgb(224, 236, 255, 0.3));
   -webkit-background-clip: text;
   color: transparent;
   display: inline-block;
-}/*# sourceMappingURL=style.css.map */
+}
