@@ -34,6 +34,7 @@ nav {
   background-color: #121212;
   -o-border-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.2)) 1;
      border-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.2)) 1;
+  z-index: 5;
 }
 nav a {
   position: relative;
