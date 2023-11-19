@@ -6,12 +6,9 @@
   justify-content: center;
   gap: 30px;
   width: 100vw;
-
   padding: 0 30px;
   box-sizing: border-box;
-
   position: relative;
-
   user-select: none;
   margin: 160px 0;
 
@@ -20,11 +17,9 @@
     background-position: 0;
     background-size: auto 100%;
     background-position: center;
-
     width: 72.5%;
     max-width: 1050px;
     border-radius: 20px;
-
     position: relative;
 
     .info-carousel {
@@ -32,7 +27,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
       position: absolute;
       z-index: 2;
       bottom: 55px;
@@ -44,9 +38,7 @@
 
       p {
         width: 337px;
-
         color: #fff;
-
         font-family: Inter;
         font-size: 16px;
         font-style: normal;
@@ -58,7 +50,6 @@
         width: 164px;
         height: 54px;
         border-radius: 4px;
-
         background-color: #fff;
         color: #000;
         text-align: center;
@@ -67,9 +58,7 @@
         font-weight: 500;
         letter-spacing: 0.8px;
         transition: 0.25s;
-
         border: none;
-
         cursor: pointer;
       }
     }
