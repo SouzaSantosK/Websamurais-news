@@ -2,11 +2,12 @@
 @import "../../../index.css";
 .destaque-cover {
   background-image: url("../../img/drstone.png");
-  background-position: 0;
+  background-position: top;
   background-size: 100% auto;
-  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 900px;
+  position: relative;
 }
 .destaque-cover::after {
   content: "";
@@ -16,5 +17,167 @@
   right: 0;
   bottom: 0;
   z-index: 1;
+  height: 900px;
   background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.newsletter {
+  margin-top: 300px;
+  width: 100vw;
+  height: 900px;
+  background: linear-gradient(97deg, #F47521 0%, rgba(255, 150, 81, 0.8) 99.48%);
+  margin-bottom: 500px;
+}
+.newsletter .top {
+  display: flex;
+  justify-content: center;
+  gap: 156px;
+  margin: 50px;
+}
+.newsletter .top .right {
+  display: flex;
+  gap: 20px;
+}
+.newsletter .top .right .one,
+.newsletter .top .right .two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 325px;
+  height: 400px;
+  padding: 30px;
+  border: 5px solid #fff;
+  background: linear-gradient(327deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.newsletter .top .right .one > p,
+.newsletter .top .right .two > p {
+  flex: 2;
+}
+.newsletter .top .right .one div,
+.newsletter .top .right .two div {
+  flex: 10;
+}
+.newsletter .top .right .one div h4,
+.newsletter .top .right .two div h4 {
+  font-size: 35px;
+  font-weight: 200;
+  letter-spacing: 1.75px;
+}
+.newsletter .top .right .one div p,
+.newsletter .top .right .two div p {
+  margin-top: 10px;
+  font-weight: 200;
+  line-height: 25px;
+  font-size: 17px;
+}
+.newsletter .top .left {
+  width: 550px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.newsletter .top .left h3 {
+  font-family: "Inter";
+  font-size: 40px;
+  font-weight: 200;
+  line-height: 60px;
+}
+.newsletter .top .left p {
+  font-family: "Inter";
+  font-weight: 200;
+  line-height: 30px;
+  font-size: 17px;
+}
+.newsletter .bottom {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.newsletter .bottom .title {
+  position: relative;
+}
+.newsletter .bottom .title h3 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.newsletter .bottom .title span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.25) 100%);
+  bottom: 17px;
+}
+.newsletter .bottom .form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 96px;
+  height: 500px;
+  position: relative;
+  background-color: #fff;
+  color: #000;
+  width: 90%;
+  max-width: 1500px;
+}
+.newsletter .bottom .form-container .thanks {
+  position: absolute;
+  bottom: 40px;
+}
+.newsletter .bottom .form-container p {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  text-align: center;
+}
+.newsletter .bottom .form-container h4 {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 400;
+}
+.newsletter .bottom .form-container > * {
+  width: 834px;
+}
+.newsletter .bottom .form-container .form {
+  position: relative;
+}
+.newsletter .bottom .form-container .form label {
+  position: absolute;
+  top: -30px;
+}
+.newsletter .bottom .form-container .form input[type=text],
+.newsletter .bottom .form-container .form input[type=email] {
+  border: none;
+  background: #eceff2;
+  font-size: 17px;
+  font-family: "Inter";
+  outline: none;
+  padding: 25px 15px;
+  margin-right: 20px;
+  width: 300px;
+}
+.newsletter .bottom .form-container .form input[type=button] {
+  background: linear-gradient(99deg, #F47521 0%, rgba(255, 150, 81, 0.8) 100%);
+  width: 183px;
+  height: 70px;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.9px;
+  cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+  .destaque-cover {
+    background-size: auto 100%;
+  }
 }/*# sourceMappingURL=animes.css.map */
