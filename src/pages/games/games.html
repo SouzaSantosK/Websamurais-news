@@ -15,7 +15,7 @@
       <span id="box"></span>
     </nav>
 
-    <div class="wrapper-mains">
+    <section class="wrapper-mains">
       <div class="main-carousel">
         <div class="info-carousel">
           <img src="../../img/journey-name.png" />
@@ -23,46 +23,48 @@
             Explore the mysterious ancient world of Journey as you soar over
             ruins and fly across sands to discover its secrets.
           </p>
-          <input type="button" value="SAIBA MAIS" />
+          <a href="#">Saiba mais</a>
         </div>
       </div>
       <div class="column">
-        <ul>
-          <li>
-            <img src="../../img/deadcells.png" />
-            <p>Dead Cells</p>
-          </li>
-          <li>
-            <img src="../../img/deadcells.png" />
-            <p>Dead Cells</p>
-          </li>
-          <li>
-            <img src="../../img/deadcells.png" />
-            <p>Dead Cells</p>
-          </li>
-          <li>
-            <img src="../../img/deadcells.png" />
-            <p>Dead Cells</p>
-          </li>
-          <li>
-            <img src="../../img/deadcells.png" />
-            <p>Dead Cells</p>
-          </li>
-        </ul>
+        <div class="card">
+          <img src="../../img/deadcells.png" />
+          <p>Dead Cells</p>
+        </div>
+        <div class="card">
+          <img src="../../img/deadcells.png" />
+          <p>Dead Cells</p>
+        </div>
+        <div class="card">
+          <img src="../../img/deadcells.png" />
+          <p>Dead Cells</p>
+        </div>
+        <div class="card">
+          <img src="../../img/deadcells.png" />
+          <p>Dead Cells</p>
+        </div>
+        <div class="card">
+          <img src="../../img/deadcells.png" />
+          <p>Dead Cells</p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="destaque">
+    <section class="destaque">
       <h3>Sackboy: A Big Adventure</h3>
-      <p>Designed for the PS5, Sackboy: A Big Adventure has made the leap into 3D platforming through the deft work of Sumo Digital. Explore the process behind creating the BAFTA-nominated PS5 launch title.</p>
+      <p>
+        Designed for the PS5, Sackboy: A Big Adventure has made the leap into 3D
+        platforming through the deft work of Sumo Digital. Explore the process
+        behind creating the BAFTA-nominated PS5 launch title.
+      </p>
 
-      <img src="../../img/sackboy.png">
-    </div>
+      <img src="../../img/sackboy.png" />
+    </section>
 
-    <div class="carrossel">
-      <h3>Top Indie Games</h3>
+    <section class="carrossel">
+      <h2>Top Indie Games</h2>
       <div class="carrossel-container">
-        <h4>Super Meat Boy Forever</h4>
+        <h3>Super Meat Boy: Forever</h3>
         <div class="slider-points">
           <span class="ball active-ball"></span>
           <span class="ball"></span>
@@ -72,66 +74,65 @@
           <span class="ball"></span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="newsletter">
-      <div class="top">
-        <div class="left">
-          <h3>
-            Do you want to stay up to date with what's happening in the world of
-            Games?
-          </h3>
+    <section class="newsletter">
+      <div class="left">
+        <h3>
+          Do you want to stay up to date with what's happening in the World of
+          Games?
+        </h3>
 
-          <p>
-            By being part of our community, you not only stay informed, but also
-            save money while enjoying the best in the gaming world. Don't miss
-            the chance to be part of it. Subscribe now and start enjoying
-            exclusive benefits.
-          </p>
-        </div>
-        <div class="right">
-          <div class="one">
-            <p>ADVANTAGE</p>
-            <div>
-              <h4>Real-time news</h4>
-              <p>
-                By subscribing to our plan, you have access to all news from the
-                gaming world, updated, confirmed and in the shortest possible
-                time.
-              </p>
-            </div>
+        <p>
+          By being part of our community, you not only stay informed, but also
+          save money while enjoying the best in the gaming world. Don't miss the
+          chance to be part of it. Subscribe now and start enjoying exclusive
+          benefits.
+        </p>
+      </div>
+      <div class="right">
+        <div class="card">
+          <p class="label">Advantage</p>
+          <div class="content">
+            <h4>Real-time news</h4>
+            <p>
+              By subscribing to our plan, you have access to all news from the
+              gaming world, updated, confirmed and in the shortest possible
+              time.
+            </p>
           </div>
-          <div class="two">
-            <p>BENEFITS</p>
-            <div>
-              <h4>Exclusive access</h4>
-              <p>
-                As a subscriber, you will always be the first to know about and
-                take advantage of our releases, events and incredible discounts
-                on our plans and services within the platform.
-              </p>
-            </div>
+        </div>
+        <div class="card">
+          <p class="label">Benefits</p>
+          <div class="content">
+            <h4>Exclusive access</h4>
+            <p>
+              As a subscriber, you will always be the first to know about and
+              take advantage of our releases, events and incredible discounts on
+              our plans and services within the platform.
+            </p>
           </div>
         </div>
       </div>
       <div class="bottom">
-        <div class="title">
-          <h3>Sign up for our Newsletter</h3>
-          <span></span>
-        </div>
+        <h3>Sign up for our Newsletter</h3>
         <div class="form-container">
-          <p>STAY CONNECTED</p>
+          <p class="label">Stay Connected</p>
           <h4>Receive news and information in the palm of your hand.</h4>
-          <div class="form">
-            <label for="name">NAME</label>
-            <input type="text" id="name" name="name" />
-            <label for="email">EMAIL</label>
-            <input type="email" id="email" name="email" />
-            <input type="button" value="SEND" />
-          </div>
+          <form>
+            <div class="input-group">
+              <input type="text" id="name" name="name" />
+              <label for="name">NAME</label>
+            </div>
+            <div class="input-group">
+              <input type="email" id="email" name="email" />
+              <label for="email">EMAIL</label>
+            </div>
+            <button type="button" value="SEND">Send</button>
+          </form>
         </div>
       </div>
-    </div>
+    </section>
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
