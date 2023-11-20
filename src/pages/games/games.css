@@ -245,4 +245,37 @@
   line-height: 60px;
   letter-spacing: 0.9px;
   cursor: pointer;
+}
+
+.destaque {
+  width: 80%;
+  height: 1103px;
+  border: 2px solid #FFF;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  max-width: 1185px;
+  margin-bottom: 100px;
+}
+.destaque h3 {
+  text-align: center;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  margin: 54px 0 34px 0;
+}
+.destaque p {
+  width: 70%;
+  color: #FFF;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.destaque img {
+  width: 110%;
+  position: absolute;
+  bottom: 56px;
 }/*# sourceMappingURL=games.css.map */
