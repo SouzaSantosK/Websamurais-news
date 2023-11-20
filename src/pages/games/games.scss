@@ -324,3 +324,73 @@
   }
 }
 
+.carrossel{
+  width: 100%;
+  max-width: 1442px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+
+  .carrossel-container{
+    background: url('../../img/supermeatboyforever.png'), lightgray 50% / cover no-repeat;
+    background-position: 0;
+    background-size: 100% auto;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 47.92%, #000 100%); 
+    }
+
+    h4{
+      position: absolute;
+      z-index: 2;
+      font-size: 60px;
+      font-weight: 700;
+      width: 466px;
+      top: 286px;
+      left: 60px;
+    }
+
+    .slider-points{
+      width: 205px;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      z-index: 2;
+      bottom: 60px;
+      left: 60px;
+
+      .ball{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+      }
+
+      .ball.active-ball{
+        width: 80px;
+        height: 15px;
+        background: linear-gradient(to right, #FF9D00, #C67E2C);
+        border-radius: 20px;
+      }
+
+    }
+  }
+
+  h3{
+    font-size: 80px;
+    font-weight: 700;
+  }
+}
