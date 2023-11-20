@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "../../../index.css";
+
+.destaque-cover{
+    background-image: url('../../img/drstone.png');
+    background-position: 0;
+    background-size: 100% auto;
+    background-position: center;
+    width: 100%;
+    height: 900px;
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
+    }
+}
