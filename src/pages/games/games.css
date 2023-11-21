@@ -329,7 +329,9 @@ body {
 }
 .newsletter .bottom .form-container .thanks {
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
 .newsletter .bottom .form-container .label {
   font-size: 18px;
