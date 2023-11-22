@@ -1,5 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "../../../index.css";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.2s ease !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: #000;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  color: white;
+  font-size: 16px;
+  padding-bottom: 140px;
+  overflow-x: hidden;
+  row-gap: 200px;
+}
+
 .destaque-cover {
   background-image: url("../../img/drstone.png");
   background-position: top;
@@ -22,138 +50,149 @@
 }
 
 .newsletter {
-  margin-top: 300px;
-  width: 100vw;
-  height: 900px;
-  background: linear-gradient(97deg, #F47521 0%, rgba(255, 150, 81, 0.8) 99.48%);
-  margin-bottom: 500px;
+  background: linear-gradient(97deg, #f47521 0%, rgba(255, 150, 81, 0.8) 99.48%);
+  margin-bottom: 230px;
+  display: grid;
+  grid-template-areas: "left right" "bottom bottom";
+  grid-template-rows: auto 350px;
+  padding: 60px 120px;
+  -moz-column-gap: 160px;
+       column-gap: 160px;
+  row-gap: 80px;
 }
-.newsletter .top {
-  display: flex;
-  justify-content: center;
-  gap: 156px;
-  margin: 50px;
-}
-.newsletter .top .right {
-  display: flex;
-  gap: 20px;
-}
-.newsletter .top .right .one,
-.newsletter .top .right .two {
+.newsletter .left {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 325px;
-  height: 400px;
-  padding: 30px;
-  border: 5px solid #fff;
-  background: linear-gradient(327deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  gap: 60px;
+  grid-area: left;
 }
-.newsletter .top .right .one > p,
-.newsletter .top .right .two > p {
-  flex: 2;
-}
-.newsletter .top .right .one div,
-.newsletter .top .right .two div {
-  flex: 10;
-}
-.newsletter .top .right .one div h4,
-.newsletter .top .right .two div h4 {
-  font-size: 35px;
-  font-weight: 200;
-  letter-spacing: 1.75px;
-}
-.newsletter .top .right .one div p,
-.newsletter .top .right .two div p {
-  margin-top: 10px;
-  font-weight: 200;
-  line-height: 25px;
-  font-size: 17px;
-}
-.newsletter .top .left {
-  width: 550px;
-  height: 330px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.newsletter .top .left h3 {
+.newsletter .left h3 {
   font-family: "Inter";
   font-size: 40px;
-  font-weight: 200;
   line-height: 60px;
+  font-weight: 400;
 }
-.newsletter .top .left p {
-  font-family: "Inter";
+.newsletter .left p {
+  font-weight: 200;
+  line-height: 35px;
+  font-size: 20px;
+}
+.newsletter .right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  grid-area: right;
+}
+.newsletter .right .card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  padding: 30px;
+  border: 5px solid #fff;
+  opacity: 0.8;
+  background: linear-gradient(325deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.newsletter .right .card .label {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.newsletter .right .card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.newsletter .right .card .content h4 {
+  font-size: 45px;
+  letter-spacing: 1.75px;
+}
+.newsletter .right .card .content p {
   font-weight: 200;
   line-height: 30px;
-  font-size: 17px;
+  font-size: 18px;
+}
+.newsletter .right .card:hover {
+  opacity: 1;
+  transform: translateY(-10px);
 }
 .newsletter .bottom {
-  margin-top: 80px;
+  grid-area: bottom;
   display: flex;
   align-items: center;
   flex-direction: column;
+  row-gap: 30px;
 }
-.newsletter .bottom .title {
+.newsletter .bottom h3 {
   position: relative;
-}
-.newsletter .bottom .title h3 {
   font-size: 45px;
   font-weight: 700;
   margin-bottom: 30px;
 }
-.newsletter .bottom .title span {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 6px;
+.newsletter .bottom h3::before {
+  content: "";
+  width: 0;
+  height: 10px;
   background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.25) 100%);
-  bottom: 17px;
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+}
+.newsletter .bottom h3:hover::before {
+  width: 100%;
 }
 .newsletter .bottom .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 96px;
-  height: 500px;
+  padding: 60px;
   position: relative;
-  background-color: #fff;
   color: #000;
-  width: 90%;
-  max-width: 1500px;
+  margin: 0 120px;
+  background: #fff;
+  min-height: 500px;
 }
 .newsletter .bottom .form-container .thanks {
   position: absolute;
   bottom: 40px;
 }
-.newsletter .bottom .form-container p {
+.newsletter .bottom .form-container .label {
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 0.9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   text-align: center;
 }
 .newsletter .bottom .form-container h4 {
   font-size: 45px;
   text-align: center;
   font-weight: 400;
+  max-width: 60%;
+  line-height: 70px;
 }
-.newsletter .bottom .form-container > * {
-  width: 834px;
-}
-.newsletter .bottom .form-container .form {
+.newsletter .bottom .form-container form {
+  display: flex;
+  justify-content: space-between;
   position: relative;
 }
-.newsletter .bottom .form-container .form label {
-  position: absolute;
-  top: -30px;
+.newsletter .bottom .form-container form .input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
-.newsletter .bottom .form-container .form input[type=text],
-.newsletter .bottom .form-container .form input[type=email] {
-  border: none;
-  background: #eceff2;
+.newsletter .bottom .form-container form label {
+  position: absolute;
+  top: 25%;
+  background: white;
+  padding: 10px;
+  text-align: center;
+  margin-left: 10px;
+}
+.newsletter .bottom .form-container form input {
+  all: unset;
+  border: 2px solid rgba(0, 0, 0, 0.8);
   font-size: 17px;
   font-family: "Inter";
   outline: none;
@@ -161,19 +200,35 @@
   margin-right: 20px;
   width: 300px;
 }
-.newsletter .bottom .form-container .form input[type=button] {
-  background: linear-gradient(99deg, #F47521 0%, rgba(255, 150, 81, 0.8) 100%);
-  width: 183px;
+.newsletter .bottom .form-container form input:hover {
+  border-color: black;
+}
+.newsletter .bottom .form-container form input:focus {
+  color: black;
+}
+.newsletter .bottom .form-container form input:focus ~ label {
+  color: black;
+  top: -20px;
+}
+.newsletter .bottom .form-container form button {
+  all: unset;
+  background: linear-gradient(99deg, #f47521 0%, rgba(255, 150, 81, 0.8) 100%);
   height: 70px;
-  border: none;
+  width: 150px;
+  border: 2px solid transparent;
   color: #fff;
   text-align: center;
   font-family: "Inter";
   font-size: 18px;
   font-weight: 700;
   line-height: 60px;
-  letter-spacing: 0.9px;
+  letter-spacing: 1px;
   cursor: pointer;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.newsletter .bottom .form-container form button:hover {
+  opacity: 1;
 }
 
 @media (max-width: 1600px) {

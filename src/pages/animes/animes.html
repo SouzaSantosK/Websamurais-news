@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animes</title>
-    <link rel="stylesheet" href="animes.css">
-</head>
-<body>
+    <link rel="stylesheet" href="animes.css" />
+  </head>
+  <body>
     <nav>
-        <a href="../../../index.html" id="first-link">Home</a>
-        <a href="../games/games.html">Games</a>
-        <a href="" class="selected">Animes</a>
-        <a href="#">Sobre</a>
-        <span id="box"></span>
+      <a href="../../../index.html" id="first-link">Home</a>
+      <a href="../games/games.html">Games</a>
+      <a href="" class="selected">Animes</a>
+      <a href="#">Sobre</a>
+      <span id="box"></span>
     </nav>
 
     <div class="destaque-cover"></div>
 
-    <div class="newsletter">
-        <div class="top">
-          <div class="left">
-            <h3>
-              Do you want to stay up to date with what's happening in the world of
-              Animes?
-            </h3>
-  
+    <section class="newsletter">
+      <div class="left">
+        <h3>
+          Do you want to stay up to date with what's happening in the world of
+          Animes?
+        </h3>
+
+        <p>
+          By being part of our community, you not only stay informed, but also
+          save money while enjoying the best in the animes world. Don't miss the
+          chance to be part of it. Subscribe now and start enjoying exclusive
+          benefits.
+        </p>
+      </div>
+      <div class="right">
+        <div class="card">
+          <p class="label">Advantage</p>
+          <div class="content">
+            <h4>Real-time news</h4>
             <p>
-              By being part of our community, you not only stay informed, but also
-              save money while enjoying the best in the anime world. Don't miss
-              the chance to be part of it. Subscribe now and start enjoying
-              exclusive benefits.
+              By subscribing to our plan, you have access to all news from the
+              animes world, updated, confirmed and in the shortest possible
+              time.
             </p>
           </div>
-          <div class="right">
-            <div class="one">
-              <p>ADVANTAGE</p>
-              <div>
-                <h4>Real-time news</h4>
-                <p>
-                  By subscribing to our plan, you have access to all news from the
-                  gaming world, updated, confirmed and in the shortest possible
-                  time.
-                </p>
-              </div>
-            </div>
-            <div class="two">
-              <p>BENEFITS</p>
-              <div>
-                <h4>Exclusive access</h4>
-                <p>
-                  As a subscriber, you will always be the first to know about and
-                  take advantage of our releases, events and incredible discounts
-                  on our plans and services within the platform.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-        <div class="bottom">
-          <div class="title">
-            <h3>Sign up for our Newsletter</h3>
-            <span></span>
-          </div>
-          <div class="form-container">
-            <p>STAY CONNECTED</p>
-            <h4>Receive news and information in the palm of your hand.</h4>
-            <div class="form">
-              <label for="name">NAME</label>
-              <input type="text" id="name" name="name" />
-              <label for="email">EMAIL</label>
-              <input type="email" id="email" name="email" />
-              <input type="button" value="SEND" />
-            </div>
+        <div class="card">
+          <p class="label">Benefits</p>
+          <div class="content">
+            <h4>Exclusive access</h4>
+            <p>
+              As a subscriber, you will always be the first to know about and
+              take advantage of our releases, events and incredible discounts on
+              our plans and services within the platform.
+            </p>
           </div>
         </div>
       </div>
-  
+      <div class="bottom">
+        <h3>Sign up for our Newsletter</h3>
+        <div class="form-container">
+          <p class="label">Stay Connected</p>
+          <h4>Receive news and information in the palm of your hand.</h4>
+          <form>
+            <div class="input-group">
+              <input type="text" id="name" name="name" />
+              <label for="name">NAME</label>
+            </div>
+            <div class="input-group">
+              <input type="email" id="email" name="email" />
+              <label for="email">EMAIL</label>
+            </div>
+            <button type="button" value="SEND">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <script
       type="text/javascript"
@@ -83,5 +81,5 @@
     ></script>
     <script src="../../js/email.js"></script>
     <script src="../../../navbar.js"></script>
-</body>
+  </body>
 </html>

@@ -14,7 +14,7 @@
 }
 
 body {
-  background: linear-gradient(#121212, rgb(0, 0, 0));
+  background: #000;
   font-family: "Inter", sans-serif;
   display: flex;
   align-items: center;
@@ -133,8 +133,100 @@ body {
   background: linear-gradient(135deg, rgba(255, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
 }
 
+section.grid {
+  display: grid;
+  width: 100%;
+  padding: 0 60px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 540px 340px 570px;
+  gap: 20px;
+  position: relative;
+}
+section.grid::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 50%, rgb(0, 0, 0) 100%);
+}
+section.grid .card {
+  background: #121212;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+}
+section.grid .card .content {
+  opacity: 0;
+  pointer-events: none;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+  gap: 10px;
+}
+section.grid .card .content h4 {
+  font-size: 45px;
+  letter-spacing: 1px;
+}
+section.grid .card .content p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+section.grid .card:hover .content {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 12;
+}
+section.grid .card:nth-child(1) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .card:nth-child(2) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .card:nth-child(3) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .card:nth-child(4) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .card:nth-child(5) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .card:nth-child(6) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .card:nth-child(7) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .card:nth-child(8) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .card:nth-child(9) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .card:nth-child(10) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .card:nth-child(11) {
+  background-image: url(../../img/banjo-kazooie.jpg);
+}
+section.grid .span-2 {
+  grid-column: span 2;
+}
+section.grid .col-2 {
+  grid-row: span 2;
+}
+
 .destaque {
-  margin: 0 160px;
+  margin: 0 200px;
   border: 2px solid #fff;
   display: flex;
   align-items: center;
@@ -260,7 +352,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 400px;
+  height: 500px;
   padding: 30px;
   border: 5px solid #fff;
   opacity: 0.8;
