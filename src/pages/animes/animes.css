@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import "../../../index.css";
+@import "../../component/navbar/navbar.css";
+
 *,
 *::before,
 *::after {
@@ -8,8 +9,8 @@
   margin: 0;
   transition: 0.2s ease !important;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   text-rendering: optimizeLegibility;
 }
 
@@ -50,14 +51,18 @@ body {
 }
 
 .newsletter {
-  background: linear-gradient(97deg, #f47521 0%, rgba(255, 150, 81, 0.8) 99.48%);
+  background: linear-gradient(
+    97deg,
+    #f47521 0%,
+    rgba(255, 150, 81, 0.8) 99.48%
+  );
   margin-bottom: 230px;
   display: grid;
   grid-template-areas: "left right" "bottom bottom";
   grid-template-rows: auto 350px;
   padding: 60px 120px;
   -moz-column-gap: 160px;
-       column-gap: 160px;
+  column-gap: 160px;
   row-gap: 80px;
 }
 .newsletter .left {
@@ -91,7 +96,11 @@ body {
   padding: 30px;
   border: 5px solid #fff;
   opacity: 0.8;
-  background: linear-gradient(325deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    325deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 .newsletter .right .card .label {
   text-transform: uppercase;
@@ -235,4 +244,4 @@ body {
   .destaque-cover {
     background-size: auto 100%;
   }
-}/*# sourceMappingURL=animes.css.map */
+} /*# sourceMappingURL=animes.css.map */
