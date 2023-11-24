@@ -366,7 +366,7 @@ h2 {
 
 .newsletter {
   background: linear-gradient(97deg, #f47521 0%, rgba(255, 150, 81, 0.8) 99.48%);
-  margin-bottom: 230px;
+  margin-bottom: 370px;
   display: grid;
   grid-template-areas: "left right" "bottom bottom";
   grid-template-rows: auto 350px;
