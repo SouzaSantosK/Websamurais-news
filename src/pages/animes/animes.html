@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animes</title>
     <link rel="stylesheet" href="./animes.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body>
     <nav>
@@ -15,7 +19,168 @@
       <span id="box"></span>
     </nav>
 
-    <div class="destaque-cover"></div>
+    <section class="hero">
+      <div class="banner">
+        <span class="material-symbols-outlined" id="back">
+          keyboard_arrow_left
+        </span>
+        <div class="content">
+          <h1>Dr. Stone</h1>
+          <p class="synopsis">
+            Milhares de anos após um misterioso fenômeno transformar a
+            humanidade inteira em pedra, desperta um garoto extraordinariamente
+            inteligente e motivado pela ciência - Senku Ishigami. Diante de um
+            mundo de pedra e do colapso generalizado da civilização, Senku
+            decide usar sua mente para reconstruir o mundo. Ao lado de Taiju
+            Oki, seu amigo...
+          </p>
+          <div class="tags">
+            <span>Sobrenatural</span>
+            <span>Ciência</span>
+          </div>
+        </div>
+        <span class="material-symbols-outlined" id="foward">
+          keyboard_arrow_right
+        </span>
+      </div>
+
+      <div class="carrossel">
+        <h2>Melhores do Outono!</h2>
+        <div class="group">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+      </div>
+
+      <div class="carrossel">
+        <h2>Mais vistos esse ano!</h2>
+        <div class="group">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="anime-banner" id="a">
+      <div class="content">
+        <h2>Vagabond</h2>
+        <h3>Bagabondo</h3>
+        <h4>バガボンド</h4>
+      </div>
+    </section>
+
+    <!-- <section class="releases">
+      <div class="top">
+        <h2>New releases</h2>
+        <p class="date">This month</p>
+      </div>
+      <div class="grid">
+        <div class="item col-2">
+          <div class="image"></div>
+          <div class="content">
+            <h5>Vinland Saga</h5>
+            <p>12 Episodes</p>
+            <p>Dub | Leg</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image"></div>
+          <div class="content">
+            <h5>Animer</h5>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image"></div>
+          <div class="content">
+            <h5>Animer</h5>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image"></div>
+          <div class="content">
+            <h5>Animer</h5>
+          </div>
+        </div>
+        <div class="item row-2">
+          <div class="image"></div>
+          <div class="content">
+            <h5>Animer</h5>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image"></div>
+          <div class="content">
+            <h5>Animer</h5>
+          </div>
+        </div>
+        <div class="item">
+          <div class="image"></div>
+          <div class="content">
+            <h5>Animer</h5>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="news">
+      <h2>News Wall</h2>
+      <div class="container">
+        <h5>Highlighted</h5>
+        <h5 class="span-2">Most recent</h5>
+        <div class="left">
+          <div class="card">
+            <img src="../../img/vinland-saga.jpg" alt="" />
+            <div class="content">
+              <h6>Vinland Saga estreia nova temporada</h6>
+              <p class="date-time">Nov 14, 2023 3:00pm GMT-3</p>
+              <p>
+                Foi confirmado nesta tarde de terça-feira a estreia da nova...
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="../../img/vinland-saga.jpg" alt="" />
+            <div class="content">
+              <h6>Vinland Saga estreia nova temporada</h6>
+              <p class="date-time">Nov 14, 2023 3:00pm GMT-3</p>
+              <p>
+                Foi confirmado nesta tarde de terça-feira a estreia da nova...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+        <div class="right">
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+          <div class="card"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="anime-banner" id="b">
+      <div class="content right">
+        <h2>Made in Abyss</h2>
+        <h3>Meido in Abisu</h3>
+        <h4>メイドインアビス</h4>
+      </div>
+    </section>
 
     <section class="newsletter">
       <div class="left">
@@ -62,11 +227,11 @@
           <h4>Receive news and information in the palm of your hand.</h4>
           <form>
             <div class="input-group">
-              <input type="text" id="name" name="name" />
+              <input type="text" minlength="3" id="name" name="name" required />
               <label for="name">NAME</label>
             </div>
             <div class="input-group">
-              <input type="email" id="email" name="email" />
+              <input type="email" id="email" name="email" required />
               <label for="email">EMAIL</label>
             </div>
             <button type="button" value="SEND">Send</button>

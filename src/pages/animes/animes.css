@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "../../component/navbar/navbar.css";
-
 *,
 *::before,
 *::after {
@@ -9,60 +8,368 @@
   margin: 0;
   transition: 0.2s ease !important;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   text-rendering: optimizeLegibility;
 }
 
 body {
-  background: #000;
+  background: black;
   font-family: "Inter", sans-serif;
   display: flex;
-  align-items: center;
   flex-direction: column;
   min-height: 100vh;
   position: relative;
   color: white;
   font-size: 16px;
-  padding-bottom: 140px;
-  overflow-x: hidden;
-  row-gap: 200px;
+  row-gap: 160px;
 }
 
-.destaque-cover {
+.hero {
   background-image: url("../../img/drstone.png");
   background-position: top;
-  background-size: 100% auto;
+  background-size: 100% 100vh;
   background-repeat: no-repeat;
   width: 100%;
-  height: 900px;
+  min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
 }
-.destaque-cover::after {
+.hero::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0) 50%);
   z-index: 1;
-  height: 900px;
-  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+.hero .banner {
+  width: 100%;
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 80px auto 80px;
+  z-index: 2;
+}
+.hero .banner span#back,
+.hero .banner span#foward {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 60px;
+  opacity: 0.4;
+}
+.hero .banner span#back:hover,
+.hero .banner span#foward:hover {
+  opacity: 1;
+}
+.hero .banner .content {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  row-gap: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.hero .banner .content h1 {
+  font-size: 80px;
+}
+.hero .banner .content .synopsis {
+  max-width: 40%;
+}
+.hero .banner .content .tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+.hero .banner .content .tags span {
+  background: #f47521;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  color: black;
+  font-weight: 500;
+  border-radius: 3px;
+}
+.hero .banner .content .tags span:hover {
+  border-color: #f47521;
+  color: #f47521;
+  background: unset;
+}
+
+.carrossel {
+  z-index: 2;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  overflow: hidden;
+}
+.carrossel .group {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  overflow-x: auto;
+}
+.carrossel .group::-webkit-scrollbar {
+  display: none;
+}
+.carrossel .group .card {
+  min-width: 250px;
+  min-height: 400px;
+  background-image: url(../../img/spyXfamily.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.releases {
+  width: 100%;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.releases .top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid;
+  -o-border-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.2)) 1;
+     border-image: linear-gradient(to right, #ffffff, rgba(255, 255, 255, 0.2)) 1;
+}
+.releases .top .date {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
+}
+.releases .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  gap: 20px;
+}
+.releases .grid .item {
+  background: #121212;
+  display: grid;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 15px;
+}
+.releases .grid .item .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../img/vinland-saga.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.releases .grid .item .content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.releases .grid .item .content h5 {
+  font-size: 25px;
+}
+.releases .grid .item .content p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.releases .grid .col-2 {
+  grid-column: 1/3;
+}
+.releases .grid .row-2 {
+  grid-row: span 2;
+}
+
+.news {
+  width: 100%;
+  background-image: url(../../img/vinland-saga.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 80px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.news::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #f47521, rgba(244, 116, 31, 0.5));
+}
+.news .container {
+  background: black;
+  display: grid;
+  grid-template-columns: 300px repeat(2, 1fr);
+  grid-template-rows: 50px 1fr;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
+  row-gap: 20px;
+  padding: 60px;
+  height: 600px;
+  overflow: hidden;
+}
+.news .container h5 {
+  font-size: 30px;
+}
+.news .container .span-2 {
+  grid-column: span 2;
+}
+.news .container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  height: 100%;
+}
+.news .container .left::-webkit-scrollbar {
+  display: none;
+}
+.news .container .left .card {
+  width: 100%;
+  padding: 15px 15px 30px;
+  background: linear-gradient(135deg, #151515, rgba(20, 20, 20, 0.5));
+  gap: 20px;
+}
+.news .container .left .card .content {
+  margin-top: 20px;
+  overflow-wrap: break-word;
+}
+.news .container .left .card .content h6 {
+  font-size: 20px;
+  line-height: 30px;
+}
+.news .container .left .card .content .date-time {
+  margin: 15px 0 35px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.news .container .left .card img {
+  width: 100%;
+}
+.news .container .middle,
+.news .container .right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+.news .container .middle .card,
+.news .container .right .card {
+  height: 100px;
+  background: linear-gradient(135deg, #151515, rgba(20, 20, 20, 0.5));
+}
+
+#a {
+  background-image: url(../../img/vagabond-banner.jpg);
+}
+
+#b {
+  background-image: url(../../img/made-in-abyss-banner.jpg);
+}
+
+.anime-banner {
+  position: relative;
+  height: 800px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px;
+}
+.anime-banner::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0.2), rgb(0, 0, 0));
+}
+.anime-banner .content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+  gap: 15px;
+}
+.anime-banner .content h2:hover,
+.anime-banner .content h3:hover,
+.anime-banner .content h4:hover {
+  opacity: 1;
+}
+.anime-banner .content h2 {
+  font-size: 80px;
+  opacity: 0.8;
+}
+.anime-banner .content h3 {
+  font-size: 60px;
+  opacity: 0.6;
+  font-weight: 600;
+}
+.anime-banner .content h4 {
+  font-size: 40px;
+  opacity: 0.6;
+  font-weight: 500;
+}
+.anime-banner .right {
+  text-align: right;
+}
+.anime-banner::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+}
+.anime-banner img {
+  width: 100%;
 }
 
 .newsletter {
-  background: linear-gradient(
-    97deg,
-    #f47521 0%,
-    rgba(255, 150, 81, 0.8) 99.48%
-  );
+  background: linear-gradient(97deg, #f47521 0%, rgba(255, 150, 81, 0.8) 99.48%);
   margin-bottom: 230px;
   display: grid;
   grid-template-areas: "left right" "bottom bottom";
   grid-template-rows: auto 350px;
   padding: 60px 120px;
   -moz-column-gap: 160px;
-  column-gap: 160px;
+       column-gap: 160px;
   row-gap: 80px;
 }
 .newsletter .left {
@@ -92,15 +399,11 @@ body {
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 500px;
+  height: 450px;
   padding: 30px;
   border: 5px solid #fff;
   opacity: 0.8;
-  background: linear-gradient(
-    325deg,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(325deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
 }
 .newsletter .right .card .label {
   text-transform: uppercase;
@@ -209,8 +512,8 @@ body {
   margin-right: 20px;
   width: 300px;
 }
-.newsletter .bottom .form-container form input:hover {
-  border-color: black;
+.newsletter .bottom .form-container form input:valid ~ label {
+  top: -20px;
 }
 .newsletter .bottom .form-container form input:focus {
   color: black;
@@ -244,4 +547,4 @@ body {
   .destaque-cover {
     background-size: auto 100%;
   }
-} /*# sourceMappingURL=animes.css.map */
+}/*# sourceMappingURL=animes.css.map */

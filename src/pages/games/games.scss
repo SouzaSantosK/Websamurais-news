@@ -211,50 +211,6 @@ section.grid {
       background: rgba(0, 0, 0, 0.8);
       z-index: 12;
     }
-
-    &:nth-child(1) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
-
-    &:nth-child(2) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
-
-    &:nth-child(3) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
-
-    &:nth-child(4) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
-
-    &:nth-child(5) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
-
-    &:nth-child(6) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
-
-    &:nth-child(7) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
-
-    &:nth-child(8) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
-
-    &:nth-child(9) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
-
-    &:nth-child(10) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
-
-    &:nth-child(11) {
-      background-image: url(../../img/banjo-kazooie.jpg);
-    }
   }
 
   .span-2 {
@@ -263,6 +219,94 @@ section.grid {
 
   .col-2 {
     grid-row: span 2;
+  }
+}
+
+#grid-1 {
+  .card {
+    &:nth-child(1) {
+      background-image: url(../../img/banjo-kazooie.jpg);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../../img/hollow-knight.jpg);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../../img/celeste.avif);
+    }
+
+    &:nth-child(4) {
+      background-image: url(../../img/forager.avif);
+    }
+
+    &:nth-child(5) {
+      background-image: url(../../img/death-taxes.jpg);
+    }
+
+    &:nth-child(6) {
+      background-image: url(../../img/soma.jpg);
+    }
+
+    &:nth-child(7) {
+      background-image: url(../../img/tunic.jpeg);
+    }
+
+    &:nth-child(8) {
+      background-image: url(../../img/outerwilds.webp);
+    }
+
+    &:nth-child(9) {
+      background-image: url(../../img/penumbra.jpg);
+    }
+
+    &:nth-child(10) {
+      background-image: url(../../img/isaac.webp);
+    }
+
+    &:nth-child(11) {
+      background-image: url(../../img/limbo.avif);
+    }
+  }
+}
+
+#grid-2 {
+  .card {
+    &:nth-child(1) {
+      background-image: url(../../img/castle-crashers.avif);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../../img/gris.avif);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../../img/ori.webp);
+    }
+
+    &:nth-child(4) {
+      background-image: url(../../img/stardew-valley.jpg);
+    }
+
+    &:nth-child(5) {
+      background-image: url(../../img/stray.webp);
+    }
+
+    &:nth-child(6) {
+      background-image: url(../../img/undertale.png);
+    }
+
+    &:nth-child(7) {
+      background-image: url(../../img/goose-game.avif);
+    }
+
+    &:nth-child(8) {
+      background-image: url(../../img/forza-motorsport.webp);
+    }
+
+    &:nth-child(9) {
+      background-image: url(../../img/outlast.webp);
+    }
   }
 }
 
@@ -549,8 +593,8 @@ section.grid {
           margin-right: 20px;
           width: 300px;
 
-          &:hover {
-            border-color: black;
+          &:valid ~ label {
+            top: -20px;
           }
 
           &:focus {
