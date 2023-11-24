@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "../../component/navbar/navbar.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.2s ease !important;
+  user-select: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: black;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 0 120px;
+}
+
+main {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  gap: 40px;
+  margin-right: 60px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+section {
+  background: #121212;
+  height: 750px;
+  width: 400px;
+  padding: 30px;
+  flex-shrink: 0;
+  position: relative;
+  filter: brightness(40%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:not(.active) .content {
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 5px 0 20px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    a {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+    }
+  }
+
+  &::before {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0.4), rgba(0, 0, 0, 0));
+    z-index: 0;
+  }
+
+  &.active {
+    width: 1000px;
+    border-radius: 5px;
+    filter: unset;
+
+    h1 {
+      font-size: 70px;
+    }
+
+    p {
+      font-size: 40px;
+      margin: 5px 0 60px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &:first-child {
+    background-image: url(../../img/about/theBrunno.jpeg);
+  }
+
+  &:nth-child(2) {
+    background-image: url(../../img/about/DOS4002.jpeg);
+  }
+
+  &:nth-child(3) {
+    background-image: url(../../img/about/westwitt.png);
+  }
+
+  &:nth-child(4) {
+    background-image: url(../../img/about/souzaSantosK.png);
+  }
+
+  .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 2;
+    position: relative;
+
+    a {
+      color: white;
+      text-decoration: none;
+      height: 50px;
+      width: 150px;
+      font-size: 18px;
+      font-weight: 500;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(90deg, #010409, #0d1117);
+      opacity: 1;
+    }
+  }
+}
