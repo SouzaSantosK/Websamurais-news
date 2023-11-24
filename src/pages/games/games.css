@@ -37,7 +37,7 @@ body {
        column-gap: 40px;
 }
 .wrapper-mains .main-carousel {
-  background-image: url("../../img/journey.png");
+  background-image: url("../../img/diablo.avif");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,7 +53,7 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
   position: absolute;
   top: 0;
   left: 0;
@@ -65,10 +65,10 @@ body {
   z-index: 1;
 }
 .wrapper-mains .main-carousel .info-carousel img {
-  width: 50%;
+  width: 500px;
 }
 .wrapper-mains .main-carousel .info-carousel p {
-  width: 30%;
+  width: 40%;
   color: #fff;
   line-height: 25px;
   font-size: 18px;
