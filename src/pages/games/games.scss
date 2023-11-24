@@ -339,56 +339,26 @@ section.grid {
   }
 }
 
-.carrossel {
+.carousel {
   width: 100%;
   padding: 0 60px;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
 
-  .carrossel-container {
-    background: url("../../img/supermeatboyforever.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-    width: 100%;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
+  .carousel-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 60px;
-    row-gap: 100px;
-
-    &::before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 1) 0%,
-        rgba(0, 0, 0, 0.1) 50%,
-        rgba(0, 0, 0, 1) 100%
-      );
-    }
-
-    h3 {
-      z-index: 1;
-      font-size: 80px;
-      width: 600px;
-    }
+    position: relative;
 
     .slider-points {
       display: flex;
-      width: fit-content;
-      gap: 10px;
-      z-index: 1;
+      justify-content: center;
+      margin-top: 10px;
+      position: absolute;
+      bottom: 60px;
+      left: 60px;
+      z-index: 5;
 
       .ball {
         width: 15px;
@@ -396,17 +366,93 @@ section.grid {
         border-radius: 50%;
         background-color: #fff;
         cursor: pointer;
+
+        transition: .3s !important;
+
+        &.active-ball {
+          width: 80px;
+          height: 15px;
+          background: linear-gradient(to right, #ff9d00, #c67e2c);
+          border-radius: 20px;
+        }
+
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .slides {
+      position: relative;
+
+      .slide {
+        display: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 60px;
+        row-gap: 100px;
+
+        opacity: 0; 
+        transition: opacity 5s ease !important; 
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.1) 50%,
+            rgba(0, 0, 0, 1) 100%
+          );
+        }
+
+        h3 {
+          z-index: 1;
+          font-size: 80px;
+          position: absolute;
+          width: 600px;
+          left: 60px;
+          bottom: 175px;
+        }
       }
 
-      .ball.active-ball {
-        width: 80px;
-        height: 15px;
-        background: linear-gradient(to right, #ff9d00, #c67e2c);
-        border-radius: 20px;
+      .active-slide {
+        opacity: 1;
+        display: flex;
       }
     }
   }
 
+  .slide-1{
+    background: url("../../img/supermeatboyforever.png");
+  }
+  .slide-2{
+    background: url("../../img/hero.avif");
+  }
+  .slide-3{
+    background: url("../../img/tinykin.avif");
+  }
+  .slide-4{
+    background: url("../../img/hades.jpg");
+  }
+  .slide-5{
+    background: url("../../img/celeste2.avif");
+  }
+  .slide-6{
+    background: url("../../img/fez.avif");
+  }
   h2 {
     font-size: 55px;
     font-weight: 700;
@@ -593,7 +639,8 @@ section.grid {
           margin-right: 20px;
           width: 300px;
 
-          &:valid ~ label {
+          &:valid ~ label
+          ,&.notempty ~ label{
             top: -20px;
           }
 
