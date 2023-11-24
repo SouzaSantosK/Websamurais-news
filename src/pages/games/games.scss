@@ -639,7 +639,8 @@ section.grid {
           margin-right: 20px;
           width: 300px;
 
-          &:valid ~ label {
+          &:valid ~ label
+          ,&.notempty ~ label{
             top: -20px;
           }
 

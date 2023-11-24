@@ -535,7 +535,7 @@ section.grid .col-2 {
   margin-right: 20px;
   width: 300px;
 }
-.newsletter .bottom .form-container form input:valid ~ label {
+.newsletter .bottom .form-container form input:valid ~ label, .newsletter .bottom .form-container form input.notempty ~ label {
   top: -20px;
 }
 .newsletter .bottom .form-container form input:focus {
