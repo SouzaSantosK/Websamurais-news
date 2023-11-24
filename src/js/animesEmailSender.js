@@ -1,4 +1,4 @@
-const button = document.querySelector('input[value="SEND"]');
+const button = document.querySelector('button[value="SEND"]');
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
@@ -25,7 +25,7 @@ button.addEventListener("click", (e) => {
     name.value = "";
     email.value = "";
 
-    const form = document.querySelector(".form");
+    const form = document.querySelector("form");
     if (document.querySelector(".thanks")) {
       document.querySelector(".thanks").remove();
     }
