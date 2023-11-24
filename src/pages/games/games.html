@@ -227,20 +227,40 @@
       </div>
     </section>
 
-    <section class="carrossel">
+    <section class="carousel">
       <h2>Top Indie Games</h2>
-      <div class="carrossel-container">
-        <h3>Super Meat Boy: Forever</h3>
+      <div class="carousel-container">
         <div class="slider-points">
-          <span class="ball active-ball"></span>
-          <span class="ball"></span>
-          <span class="ball"></span>
-          <span class="ball"></span>
-          <span class="ball"></span>
-          <span class="ball"></span>
+          <span class="ball active-ball" onclick="changeSlide(0)"></span>
+          <span class="ball" onclick="changeSlide(1)"></span>
+          <span class="ball" onclick="changeSlide(2)"></span>
+          <span class="ball" onclick="changeSlide(3)"></span>
+          <span class="ball" onclick="changeSlide(4)"></span>
+          <span class="ball" onclick="changeSlide(5)"></span>
+        </div>
+        <div class="slides">
+          <div class="slide slide-1">
+            <h3>Super Meat Boy: Forever</h3>
+          </div>
+          <div class="slide slide-2">
+            <h3>The Artful Escape</h3>
+          </div>
+          <div class="slide slide-3">
+            <h3>Tinykin</h3>
+          </div>
+          <div class="slide slide-4">
+            <h3>Hades</h3>
+          </div>
+          <div class="slide slide-5">
+            <h3>Celeste</h3>
+          </div>
+          <div class="slide slide-6">
+            <h3>FEZ</h3>
+          </div>
         </div>
       </div>
     </section>
+    
 
     <section class="newsletter">
       <div class="left">
@@ -304,6 +324,7 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
     <script src="../../js/gamesEmailSender.js"></script>
+    <script src="../../js/sliderDestaque.js"></script>
     <script src="../../component/navbar/navbar.js"></script>
   </body>
 </html>
