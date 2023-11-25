@@ -551,7 +551,9 @@ h2 {
 
       .thanks {
         position: absolute;
-        bottom: 40px;
+        bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
       }
 
       .label {
@@ -600,8 +602,8 @@ h2 {
           margin-right: 20px;
           width: 300px;
 
-          &:valid ~ label
-          ,&.notempty ~ label{
+          &:valid ~ label,
+          &.notempty ~ label {
             top: -20px;
           }
 

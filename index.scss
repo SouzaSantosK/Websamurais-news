@@ -184,3 +184,16 @@ h1 {
     }
   }
 }
+
+.typed-cursor {
+  display: flex;
+  align-items: center;
+  font-size: 100px;
+  margin-top: 10px;
+  pointer-events: none;
+  background: linear-gradient(180deg, #deeaff, rgb(224, 236, 255, 0.4));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
